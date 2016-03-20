@@ -3,6 +3,8 @@
 ECS120, UC DAVIS
 TextBook: Theory of Computation by Michael Sipser
 
+Simulated using Professor Doty's simulator
+
 Simulated the following machines:
   DFA (Deterministic Finite Automata)
   NFA (Non-Deterministic Finite Automata
