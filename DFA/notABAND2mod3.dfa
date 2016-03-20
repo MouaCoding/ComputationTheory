@@ -1,0 +1,43 @@
+# This DFA recognizes L1 and L2 
+
+states:		lambda+0mod3,
+		a+1mod3,
+		b+1mod3,
+		a+2mod3,
+		b+2mod3,
+		a+0mod3,
+		b+0mod3,
+		qab+2mod3,
+		qab+1mod3,
+		qab+0mod3
+
+		
+input_alphabet:	a,b
+
+start_state:	lambda+0mod3
+
+
+accept_states:	a+2mod3,
+		b+2mod3
+		
+delta:
+		lambda+0mod3,a 	-> a+1mod3
+		lambda+0mod3,b 	-> b+1mod3
+		a+1mod3,a	-> a+2mod3
+		a+1mod3,b	-> qab+2mod3
+		b+1mod3,a	-> a+2mod3
+		b+1mod3,b	-> b+2mod3
+		a+2mod3,a	-> a+0mod3
+		a+2mod3,b	-> qab+0mod3
+		b+2mod3,a	-> a+0mod3
+		b+2mod3,b	-> b+0mod3
+		a+0mod3,a	-> a+1mod3	
+		a+0mod3,b	-> qab+1mod3
+		b+0mod3,a	-> a+1mod3
+		b+0mod3,b	-> b+1mod3
+		qab+2mod3,a	-> qab+0mod3
+		qab+2mod3,b	-> qab+0mod3
+		qab+1mod3,a	-> qab+2mod3
+		qab+1mod3,b	-> qab+2mod3
+		qab+0mod3,a	-> qab+1mod3
+		qab+0mod3,b	-> qab+1mod3
