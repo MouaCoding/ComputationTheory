@@ -1,0 +1,32 @@
+# This DFA recognizes L1 ={w | w ∈ Σ^∗ and |w| ≡ 2 mod 3} over Σ = {a,b}.
+
+states:		lambda,
+		qa,
+		qb,
+		qaa,
+		qab,
+		qba,
+		qbb
+
+input_alphabet:	a,b
+
+start_state:	lambda
+
+accept_state:	qaa,qab,qba,qbb
+
+delta:
+		lambda,a -> qa
+		lambda,b -> qb
+		qa,a 	 -> qaa
+		qa,b	 -> qab
+		qb,a	 -> qba
+		qb,b	 -> qbb
+		qaa,a	 -> lambda
+		qaa,b	 -> lambda
+                qab,a    -> lambda
+                qab,b    -> lambda
+                qba,a    -> lambda
+                qba,b    -> lambda
+                qbb,a    -> lambda
+                qbb,b    -> lambda
+
