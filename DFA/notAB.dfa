@@ -1,0 +1,21 @@
+# This DFA recognizes the language L2 = {w | w ∈ Σ∗ and ‘ab’ is not a substring of w}.
+
+states:         lambda,
+		a,
+		b,
+		qab
+
+input_alphabet: a,b
+
+start_state:    lambda
+
+accept_states:   a,b
+
+delta:
+                lambda,a -> a
+                lambda,b -> b
+                a,a     -> a
+                a,b     -> qab
+                b,a     -> a
+                b,b     -> b
+
